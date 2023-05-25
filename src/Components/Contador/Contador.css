@@ -1,0 +1,36 @@
+.contador {
+    background-color: #EFECD9;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .btn-decrement,
+  .btn-increment,
+  .btn-add-to-cart {
+    background-color: #C6C098;
+    border-radius: 8px;
+    color: #2F4A5C;
+    border: none;
+    padding: 8px 12px;
+  }
+  
+  .btn-decrement,
+  .btn-increment {
+    margin-right: 10px;
+  }
+  
+  .count {
+    color: #2F4A5C;
+    font-size: 18px;
+    margin: 0;
+    margin-right: 10px;
+  }
+  
+  .btn-increment:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  

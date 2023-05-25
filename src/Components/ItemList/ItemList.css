@@ -1,0 +1,9 @@
+.item-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr)); /* Ajusta el porcentaje según tus necesidades */
+    gap: 16px;
+   
+    max-width: 100%; /* Ajusta el porcentaje según tus necesidades */
+    margin: 0 auto; /* Centra el contenedor en la página */
+  }
+  

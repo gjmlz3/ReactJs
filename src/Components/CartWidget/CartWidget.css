@@ -1,0 +1,7 @@
+.social-icons {
+    display: flex;
+    gap: 20px; /* Aumenta el espaciado entre los iconos */
+    margin-left: 20px; 
+    color: #2F4A5C;
+    font-size: 28px; }
+  

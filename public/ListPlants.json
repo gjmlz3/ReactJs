@@ -1,0 +1,184 @@
+[
+    {
+      "codigo": "PL001",
+      "nombre": "Monstera deliciosa",
+      "caracteristicas": "Planta de interior con hojas grandes y perforadas. Requiere luz indirecta y riego regular.",
+      "cuidados": "Moderado",
+      "stock": 15,
+      "stockMaximo": 20,
+      "precio": 500,
+      "imagen": "/Assets/MonsteraDeliciosa.jpg"
+    },
+    {
+      "codigo": "PL002",
+      "nombre": "Ficus Lyrata",
+      "caracteristicas": "Planta de interior con hojas grandes y brillantes. Necesita luz brillante indirecta y riego regular.",
+      "cuidados": "Moderado",
+      "stock": 12,
+      "stockMaximo": 20,
+      "precio": 600,
+      "imagen": "/Assets/FicusLyrata.jpg"
+    },
+    {
+      "codigo": "PL003",
+      "nombre": "Pothos",
+      "caracteristicas": "Planta de interior colgante con hojas verdes y amarillas. Tolera diversas condiciones de luz y riego moderado.",
+      "cuidados": "Fácil",
+      "stock": 8,
+      "stockMaximo": 20,
+      "precio": 350,
+      "imagen": "/Assets/Potus.jpg"
+    },
+    {
+      "codigo": "PL004",
+      "nombre": "Calathea orbifolia",
+      "caracteristicas": "Planta de interior con hojas grandes y rayas plateadas. Requiere luz indirecta y humedad alta.",
+      "cuidados": "Moderado",
+      "stock": 18,
+      "stockMaximo": 20,
+      "precio": 450,
+      "imagen": "/Assets/CalatheaOrbifolia.jpg"
+    },
+    {
+      "codigo": "PL005",
+      "nombre":"Sansevieria",
+      "caracteristicas": "Planta de interior resistente con hojas verticales y patrones. Tolera condiciones de luz baja y riego escaso.",
+      "cuidados": "Fácil",
+      "stock": 5,
+      "stockMaximo": 20,
+      "precio": 800,
+      "imagen": "/Assets/Sansevieria.jpg"
+    },
+    {
+      "codigo": "PL006",
+      "nombre": "Dracaena marginata",
+      "caracteristicas": "Planta de interior con hojas estrechas y rojas en los bordes. Requiere luz brillante indirecta y riego moderado.",
+      "cuidados": "Moderado",
+      "stock": 10,
+      "stockMaximo": 20,
+      "precio": 550,
+      "imagen": "/Assets/DracaenaMarginata.jpg"
+    },
+    {
+      "codigo": "PL007",
+      "nombre": "Flor de la Paz",
+      "caracteristicas": "Planta de interior con hojas verdes oscuro y flores blancas. Prefiere luz brillante indirecta y riego regular.",
+      "cuidados": "Moderado",
+      "stock": 20,
+      "stockMaximo": 20,
+      "precio": 700,
+      "imagen": "/Assets/FlorDeLaPaz.jpg"
+    },
+    
+    {
+      "codigo": "PL010",
+      "nombre": "Philodendron",
+      "caracteristicas": "Planta de interior con hojas verdes grandes y en forma de corazón. Requiere luz indirecta y riego regular.",
+      "cuidados": "Moderado",
+      "stock": 7,
+      "stockMaximo": 20,
+      "precio": 400,
+      "imagen": "/Assets/Philodendron.jpg"
+    },
+    {
+      "codigo": "PL011",
+      "nombre": "Spider plant",
+      "caracteristicas": "Planta de interior colgante con hojas verdes largas y arqueadas. Tolera condiciones de luz baja y riego moderado.",
+      "cuidados": "Fácil",
+      "stock": 14,
+      "stockMaximo": 20,
+      "precio": 320,
+      "imagen": "/Assets/SpiderPlant.jpg"
+    },
+    {
+      "codigo": "PL012",
+      "nombre": "Pilea peperomioides",
+      "caracteristicas": "Planta de interior con hojas redondas y tallos delgados. Requiere luz indirecta y riego moderado.",
+      "cuidados": "Moderado",
+      "stock": 9,
+      "stockMaximo": 20,
+      "precio": 380,
+      "imagen": "/Assets/PileaPeperomioides.jpg"
+    },
+    {
+      "codigo": "PL013",
+      "nombre": "Hoya carnosa",
+      "caracteristicas": "Planta de interior con hojas gruesas y cerosas. Necesita luz brillante indirecta y riego moderado.",
+      "cuidados": "Moderado",
+      "stock": 6,
+      "stockMaximo": 20,
+      "precio": 600,
+      "imagen": "/Assets/HoyaCarnosa.jpg"
+    },
+    {
+      "codigo": "PL014",
+      "nombre": "Gomero",
+      "caracteristicas": "Planta de interior con hojas grandes y brillantes. Requiere luz indirecta y riego regular.",
+      "cuidados": "Moderado",
+      "stock": 11,
+      "stockMaximo": 20,
+      "precio": 520,
+      "imagen": "/Assets/Gomero.jpg"
+    },
+    {
+      "codigo": "PL015",
+      "nombre": "Helecho",
+      "caracteristicas": "Planta de interior con frondas verdes y plumosas. Necesita luz indirecta y humedad alta.",
+      "cuidados": "Moderado",
+      "stock": 4,
+      "stockMaximo": 20,
+      "precio": 380,
+      "imagen": "/Assets/Helecho.jpg"
+    },
+    {
+      "codigo": "PL016",
+      "nombre": "Dieffenbachia",
+      "caracteristicas": "Planta de interior con hojas grandes y manchadas. Requiere luz brillante indirecta y riego moderado.",
+      "cuidados": "Moderado",
+      "stock": 13,
+      "stockMaximo": 20,
+      "precio": 450,
+      "imagen": "/Assets/Dieffenbachia.jpg"
+    },
+    {
+      "codigo": "PL017",
+      "nombre": "Rosario",
+      "caracteristicas": "Planta de interior colgante con hojas redondas y suculentas. Requiere luz brillante indirecta y riego escaso.",
+      "cuidados": "Fácil",
+      "stock": 17,
+      "stockMaximo": 20,
+      "precio": 480,
+      "imagen": "/Assets/Rosario.jpg"
+    },
+    {
+      "codigo": "PL018",
+      "nombre": "Palmito",
+      "caracteristicas": "Planta de interior con hojas en forma de abanico. Tolera condiciones de luz baja y riego moderado.",
+      "cuidados": "Fácil",
+      "stock": 19,
+      "stockMaximo": 20,
+      "precio": 280,
+      "imagen": "/Assets/Palmito.jpg"
+    },
+    {
+      "codigo": "PL019",
+      "nombre": "Helecho Nido de Ave",
+      "caracteristicas": "Planta de interior con hojas en forma de nido de ave. Necesita luz indirecta y humedad alta.",
+      "cuidados": "Moderado",
+      "stock": 2,
+      "stockMaximo": 20,
+      "precio": 590,
+      "imagen": "/Assets/HelechoNidoDeAve.jpg"
+    },
+    {
+      "codigo": "PL020",
+      "nombre": "Potus Variegado",
+      "caracteristicas": "Planta de interior colgante con hojas verdes y doradas. Tolera diversas condiciones de luz y riego moderado.",
+      "cuidados": "Fácil",
+      "stock": 10,
+      "stockMaximo": 20,
+      "precio": 350,
+      "imagen": "/Assets/PotusVariegado.jpg"
+    }
+  ]
+  

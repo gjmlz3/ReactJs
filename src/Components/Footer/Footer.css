@@ -1,0 +1,25 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #D5D2C2;
+    padding: 10px;
+    height: 80px;
+    border-radius: 20px;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 20px; /* Aumenta el espaciado entre los iconos */
+    margin-left: 20px;  }
+  
+  .social-icons a {
+    color: #2F4A5C;
+    font-size: 28px; /* Aumenta el tamaño de los iconos */
+  }
+  
+  .author {
+    color: #2F4A5C;
+    margin-right: 20px;
+  }
+  
