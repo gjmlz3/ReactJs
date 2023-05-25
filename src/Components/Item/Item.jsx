@@ -80,9 +80,20 @@ const Item = ({
             <h3>{nombre}</h3>
             <p>{caracteristicas}</p>
             {!addedToCart ? (
-              <button className="item-button modal-add-to-cart" onClick={addToCart}>
-                Agregar al carrito
-              </button>
+              <>
+                <div className="item-counter">
+                  <button className="item-button" onClick={decrementCount}>
+                    -
+                  </button>
+                  <span className="item-count">{count}</span>
+                  <button className="item-button" onClick={incrementCount}>
+                    +
+                  </button>
+                </div>
+                <button className="item-button modal-add-to-cart" onClick={addToCart}>
+                  Agregar al carrito
+                </button>
+              </>
             ) : (
               <div className="added-to-cart-modal">
                 Producto agregado al carrito <br />
