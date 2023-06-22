@@ -26,6 +26,7 @@ export const CartProvider = ({children}) => {
    
     const cantidadEnCarrito = () => {
         return carrito.reduce((acc, prod) => acc + prod.cantidad, 0);
+       
     }
     
 
@@ -45,7 +46,7 @@ export const CartProvider = ({children}) => {
         setCarrito(carrito.filter((item) => item.id !== idDelete));
       }
     
-
+      console.log(carrito);
     return (
         <CartContext.Provider value={ {
             carrito,

@@ -1,39 +1,41 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './ItemCount.css';
+import { useState } from 'react';
 
-const ItemCount = ({ stock, handleRestar, handleSumar, handleAgregar }) => {
-  const [cantidad, setCantidad] = useState(1);
 
-  const restar = () => {
-    if (cantidad > 1) {
-      setCantidad(cantidad - 1);
-      handleRestar();
-    }
-  };
 
-  const sumar = () => {
-    if (cantidad < stock) {
-      setCantidad(cantidad + 1);
-      handleSumar();
-    }
-  };
+const ItemCount = ({stock, onAdd}) =>{
+const [cantidad, setCantidad] = useState(0)
 
-  return (
-    <div>
-      <div className="item-count">
-        <button className="counter-button" onClick={restar}>
-          -
-        </button>
-        <p>{cantidad}</p>
-        <button className="counter-button" onClick={sumar}>
-          +
-        </button>
-        <button className="add-to-cart" onClick={handleAgregar}>
-          Agregar al carrito
-        </button>
-      </div>
-    </div>
-  );
-};
+const increment = () => {
+  if (cantidad < stock) {
+    setCantidad(cantidad + 1)
+  }
+}
 
+const decrement = () => {
+  if (cantidad > 1) {
+    setCantidad(cantidad - 1)
+  }
+}
+return (
+  <div>
+  <div className="item-count">
+    <button className="counter-button" onClick={decrement}>
+      -
+    </button>
+    <p>{cantidad}</p>
+    <button className="counter-button" onClick={increment}>
+      +
+    </button>
+    <button className="add-to-cart" onClick={()=> onAdd(cantidad)}>
+      Agregar al carrito
+    </button>
+  </div>
+</div>
+
+
+)
+
+}
 export default ItemCount;
