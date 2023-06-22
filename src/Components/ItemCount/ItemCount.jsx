@@ -1,32 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ItemCount.css';
 
-const ItemCount = ({ agregarAlCarrito }) => {
-  
-  const { agregarAlCarrito } = useContext(CartContext);
-
+const ItemCount = ({ stock, handleRestar, handleSumar, handleAgregar }) => {
   const [cantidad, setCantidad] = useState(1);
 
-  const handleRestar = () => {
-    cantidad > 1 && setCantidad(cantidad - 1);
+  const restar = () => {
+    if (cantidad > 1) {
+      setCantidad(cantidad - 1);
+      handleRestar();
+    }
   };
 
-  const handleSumar = () => {
-    cantidad < item.stock && setCantidad(cantidad + 1);
+  const sumar = () => {
+    if (cantidad < stock) {
+      setCantidad(cantidad + 1);
+      handleSumar();
+    }
   };
+
   return (
     <div>
       <div className="item-count">
-        <button className="counter-button" onClick={handleRestar}>
+        <button className="counter-button" onClick={restar}>
           -
         </button>
         <p>{cantidad}</p>
-        <button className="counter-button" onClick={handleSumar}>
+        <button className="counter-button" onClick={sumar}>
           +
         </button>
         <button className="add-to-cart" onClick={handleAgregar}>
-        Agregar al carrito
-      </button>
+          Agregar al carrito
+        </button>
       </div>
     </div>
   );
