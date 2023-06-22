@@ -3,19 +3,9 @@ import { CartContext } from "../../Context/CartContext";
 import ItemCount from "../ItemCount/ItemCount";
 import './ItemDetail.css';
 
-const ItemDetail = ({ item }) => {
-  const { agregarAlCarrito } = useContext(CartContext);
-
-  const [cantidad, setCantidad] = useState(1);
-
-  const handleRestar = () => {
-    cantidad > 1 && setCantidad(cantidad - 1);
-  };
-
-  const handleSumar = () => {
-    cantidad < item.stock && setCantidad(cantidad + 1);
-  };
-
+const ItemDetail = ({ cantidad, item, handleSumar, handleRestar, agregarAlCarrito}) => {
+  
+  
   return (
     <div className="container">
       <div className="producto-detalle">

@@ -9,8 +9,6 @@ const ItemListContainer = () => {
 
   const [productos, setProductos] = useState([]);
 
-  const [titulo, setTitulo] = useState("Productos");
-
   const cuidados= useParams().cuidados;
 
   useEffect(() => {
@@ -31,7 +29,7 @@ const ItemListContainer = () => {
   
 return (
   <div>
-      <ItemList productos={productos} titulo={titulo} cuidados={cuidados}/>
+      <ItemList productos={productos} titulo={"Productos"} cuidados={cuidados}/>
   </div>
 )
 }

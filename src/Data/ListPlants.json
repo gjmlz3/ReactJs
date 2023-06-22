@@ -30,7 +30,7 @@
       "imagen": "/Assets/Potus.jpg"
     },
     {
-      "codigo": "PL004",
+      "ID": "PL004",
       "nombre": "Calathea orbifolia",
       "caracteristicas": "Planta de interior con hojas grandes y rayas plateadas. Requiere luz indirecta y humedad alta.",
       "cuidados": "Moderado",
@@ -40,7 +40,7 @@
       "imagen": "/Assets/CalatheaOrbifolia.jpg"
     },
     {
-      "codigo": "PL005",
+      "ID": "PL005",
       "nombre":"Sansevieria",
       "caracteristicas": "Planta de interior resistente con hojas verticales y patrones. Tolera condiciones de luz baja y riego escaso.",
       "cuidados": "Facil",

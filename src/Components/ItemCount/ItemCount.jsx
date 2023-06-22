@@ -1,7 +1,19 @@
 import React from 'react';
 import './ItemCount.css';
 
-const ItemCount = ({ cantidad, handleRestar, handleSumar, handleAgregar }) => {
+const ItemCount = ({ agregarAlCarrito }) => {
+  
+  const { agregarAlCarrito } = useContext(CartContext);
+
+  const [cantidad, setCantidad] = useState(1);
+
+  const handleRestar = () => {
+    cantidad > 1 && setCantidad(cantidad - 1);
+  };
+
+  const handleSumar = () => {
+    cantidad < item.stock && setCantidad(cantidad + 1);
+  };
   return (
     <div>
       <div className="item-count">
