@@ -1,23 +1,16 @@
 import React from 'react';
-import './ItemList.css'
-import Item from '../Item/Item';
+import { Item } from '../Item/Item';
+import './ItemList.css'; 
 
-const ItemList = ({ plantData }) => {
+const ItemList = ({ productos }) => {
   return (
-    <div className='item-list'>
-      {plantData.map((plant) => (
-        <Item
-          key={plant.codigo}
-          codigo={plant.codigo}
-          nombre={plant.nombre}
-          caracteristicas={plant.caracteristicas}
-          cuidados={plant.cuidados}
-          stock={plant.stock}
-          stockMaximo={plant.stockMaximo}
-          precio={plant.precio}
-          imagen={plant.imagen}
-        />
-      ))}
+    <div className="item-list">
+      <h2>Productos</h2>
+      <div className="productos">
+        {productos.map((prod) => (
+          <Item producto={prod} key={prod.id} />
+        ))}
+      </div>
     </div>
   );
 };

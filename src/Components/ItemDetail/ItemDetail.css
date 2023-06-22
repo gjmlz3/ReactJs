@@ -1,0 +1,44 @@
+.container {
+  background-color: #D5D2C2;
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.producto-detalle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.producto-detalle img {
+  max-width: 200px;
+  margin-right: 20px;
+}
+
+.Nombre {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.Caracteristicas {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.categoria {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.precio {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}

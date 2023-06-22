@@ -1,23 +1,34 @@
-import { useEffect, useState } from 'react';
-import Item from '../Item/Item';
+import { useEffect, useState } from "react"
+import { useParams } from "react-router-dom";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../../Service/config";
+import ItemDetail from "../ItemDetail/ItemDetail";
+
+const ItemDetailContainer = () => {
+
+    const [item, setItem] = useState(null);
+    const id = useParams().id;
+
+    useEffect(() => {
+
+      const docRef = doc(db, "productos", id);
+
+      getDoc(docRef)
+        .then((resp) => {
+          setItem( {
+            ...resp.data(), id: resp.id
+          } );
+        })
+        
+    }, [id])
+    
+
+  return (
+    <div>
+        {item && <ItemDetail item={item} />}
+    </div>
+  )
+}
 
 
-const ItemDetailContainer= () => {
-  const [plantData, setPlantData] = useState([]);
-
-  useEffect(() => {
-    fetch('/ListPlants.json')
-      .then((response) => response.json())
-      .then((data) => setPlantData(data))
-      .catch((error) => console.error('Error fetching plant data:', error));
-  }, []);
-
-return (
-  <div className=''>
-    <Item {...plantData}></Item>
-  </div>
-)
- 
-};
-
-export default ItemDetailContainer;
+export default ItemDetailContainer

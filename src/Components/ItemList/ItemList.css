@@ -1,9 +1,22 @@
 .item-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr)); /* Ajusta el porcentaje según tus necesidades */
-    gap: 16px;
-   
-    max-width: 100%; /* Ajusta el porcentaje según tus necesidades */
-    margin: 0 auto; /* Centra el contenedor en la página */
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+  max-width: 80%;
+  margin: 0 auto;
+  text-align: center; /* Asegúrate de mantener esta línea */
+}
+
+.item-list > h2 {
+  width: 80%; /* Ocupa todo el ancho disponible */
+  text-align: center; /* Centra el texto horizontalmente */
+}
+
+.productos {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

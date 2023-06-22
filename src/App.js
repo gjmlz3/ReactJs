@@ -1,28 +1,44 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './Components/NavBar/NavBar';
-import './App.css';
-import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
 import Footer from './Components/Footer/Footer';
 import Inicio from './Components/Inicio/Inicio';
-import QuienesSomos from './Components/QuienesSomos/QuienesSomos'; // Importa el componente QuienesSomos
-import Asesoramiento from './Components/Asesoramiento/Asesoramiento';
+import QuienesSomos from './Components/QuienesSomos/QuienesSomos';
+import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
+import { CartProvider } from './Context/CartContext';
+import Cart from './Components/Cart/Cart';
+import Contacto from './Components/Contacto/Contacto';
+import CheckoutForm from './Components/CheckOutForm/CheckOutForm';
+
+
+
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="App">
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<Inicio />} />
-          <Route path="/QuienesSomos" element={<QuienesSomos />} /> 
-          <Route path="/ItemListContainer" element={<ItemListContainer />} />
-          <Route path="/Asesoramiento" element={<Asesoramiento />} />
-        </Routes>
-        <Footer />
-      </div>
-    </BrowserRouter>
-  );
+  
+        <div className="App">
+          <CartProvider>
+            <BrowserRouter>
+              <NavBar />
+              <Routes>
+                <Route path="/" element={<Inicio />} />
+                <Route path="/QuienesSomos" element={<QuienesSomos />} />
+                <Route path="/Compra" element={<ItemListContainer />} />
+                <Route path="/productos" element={<ItemListContainer />} />
+                <Route path="/productos/:cuidados" element={<ItemListContainer />} />
+                <Route path="/Item/:id" element={<ItemDetailContainer />} />
+                <Route path="/Contacto" element={<Contacto />} />
+                <Route path="/Cart" element={<Cart />} />
+                <Route path="/CheckOutForm" element={<CheckoutForm />} />
+              </Routes>
+
+              <Footer />
+            </BrowserRouter>
+          </CartProvider>
+        </div>
+
+        );
 }
 
-export default App;
+        export default App;
