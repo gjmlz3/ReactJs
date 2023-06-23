@@ -19,7 +19,7 @@ export default function CheckoutForm({ onConfirm }) {
 
   function onSubmit(evt) {
     evt.preventDefault();
-    console.log(userData);
+    
     onConfirm(userData);
   }
 
@@ -37,7 +37,7 @@ export default function CheckoutForm({ onConfirm }) {
 
   return (
     <form className="checkout-container" onSubmit={onSubmit}>
-      <h1>Ingresa tus datos para completar la compra 🛍</h1>
+      <h1>Ingresa tus datos para completar la compra </h1>
       <div style={styleInput}>
         <label style={label}>Nombre</label>
         <input
@@ -52,7 +52,7 @@ export default function CheckoutForm({ onConfirm }) {
         <input
           value={userData.phone}
           name="phone"
-          type="text"
+          type="phone"
           onChange={onInputChange}
         />
       </div>
@@ -61,7 +61,7 @@ export default function CheckoutForm({ onConfirm }) {
         <input
           value={userData.email}
           name="email"
-          type="text"
+          type="email"
           onChange={onInputChange}
         />
       </div>

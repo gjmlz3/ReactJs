@@ -28,7 +28,7 @@ const ItemDetail = ({item, caracteristicas, cuidados, imagen, nombre, precio, st
           <p className="Caracteristicas">{item.caracteristicas}</p>
           <p className="categoria">Cuidados {item.cuidados}</p>
           <p className="precio">${item.precio}</p>
-          <p className="stock">Stock ${item.stock}</p>
+          <p className="stock">Stock {item.stock}</p>
           { cantidadAgregada > 0 ? (
                             <Link to='/cart'>Terminar compra</Link>
                         ) : (

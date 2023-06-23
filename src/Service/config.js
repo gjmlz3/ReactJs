@@ -77,7 +77,7 @@ export async function createOrderWithStockUpdate(data) {
         const docSnap = await getDoc(refDoc);
 
         const { stock } = docSnap.data();
-        console.log(stock);
+       
 
         const stockToUpdate = stock - itemInCart.cantidad;
         if (stockToUpdate < 0) {

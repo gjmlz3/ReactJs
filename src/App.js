@@ -10,6 +10,8 @@ import { CartProvider } from './Context/CartContext';
 import Cart from './Components/Cart/Cart';
 import Contacto from './Components/Contacto/Contacto';
 import CheckoutForm from './Components/CheckOutForm/CheckOutForm';
+import OrderConfirmation from './Components/OrderConfirmation/OrderConfirmation';
+
 
 
 
@@ -31,6 +33,9 @@ function App() {
                 <Route path="/Contacto" element={<Contacto />} />
                 <Route path="/Cart" element={<Cart />} />
                 <Route path="/CheckOutForm" element={<CheckoutForm />} />
+                <Route path="/order-confirmation:orderID" element={<OrderConfirmation />} />
+               
+               
               </Routes>
 
               <Footer />

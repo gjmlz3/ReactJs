@@ -46,7 +46,7 @@ export const CartProvider = ({children}) => {
         setCarrito(carrito.filter((item) => item.id !== idDelete));
       }
     
-      console.log(carrito);
+      
     return (
         <CartContext.Provider value={ {
             carrito,

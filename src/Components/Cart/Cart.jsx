@@ -3,11 +3,11 @@ import { CartContext } from '../../Context/CartContext';
 import './Cart.css';
 import CheckoutForm from '../CheckOutForm/CheckOutForm';
 import { createOrderWithStockUpdate } from '../../Service/config';
-import { useNavigate } from 'react-router-dom';
+
 
 const Cart = () => {
   const { carrito, precioTotal, vaciarCarrito, removeItem } = useContext(CartContext);
-  const navigateTo = useNavigate();
+ 
 
   const handleConfirm = async (userData) => {
     const order = {
@@ -19,9 +19,9 @@ const Cart = () => {
 
     try {
       const id = await createOrderWithStockUpdate(order);
-      console.log('respuesta', id);
+      
       vaciarCarrito();
-      navigateTo(`/order-confirmation/${id}`);
+      alert(`Su compra ha sido registrada satisfactoriamente con el número de ID: ${id}`);
     } catch (error) {
       alert(error);
     }
@@ -49,7 +49,7 @@ const Cart = () => {
           </thead>
           <tbody>
             {carrito.map((prod) => (
-              <tr key={prod.id}> {/* Agregar key={prod.id} */}
+              <tr key={prod.id}>
                 <td>{prod.nombre}</td>
                 <td>
                   <img src={prod.imagen} alt={prod.nombre} />
@@ -62,7 +62,6 @@ const Cart = () => {
                 </td>
               </tr>
             ))}
-
           </tbody>
         </table>
       ) : (
