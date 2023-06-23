@@ -79,7 +79,7 @@ export async function createOrderWithStockUpdate(data) {
         const { stock } = docSnap.data();
         console.log(stock);
 
-        const stockToUpdate = stock - itemInCart.count;
+        const stockToUpdate = stock - itemInCart.cantidad;
         if (stockToUpdate < 0) {
             throw new Error(
                 `No hay stock suficiente del producto: ${itemInCart.id}`

@@ -49,7 +49,7 @@ const Cart = () => {
           </thead>
           <tbody>
             {carrito.map((prod) => (
-              <tr key={prod.id}>
+              <tr key={prod.id}> {/* Agregar key={prod.id} */}
                 <td>{prod.nombre}</td>
                 <td>
                   <img src={prod.imagen} alt={prod.nombre} />
@@ -62,6 +62,7 @@ const Cart = () => {
                 </td>
               </tr>
             ))}
+
           </tbody>
         </table>
       ) : (

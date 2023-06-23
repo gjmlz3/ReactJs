@@ -3,7 +3,7 @@ import { CartContext } from '../../Context/CartContext';
 import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css';
 import { Link } from 'react-router-dom';
-import { Item } from '../Item/Item';
+
 
 
 const ItemDetail = ({item, caracteristicas, cuidados, imagen, nombre, precio, stock}) => {
