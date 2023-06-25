@@ -15,6 +15,7 @@ Esta es una aplicación de compra de plantas en línea que te permite explorar y
 - React: Biblioteca de JavaScript para construir la interfaz de usuario.
 - Firebase: Plataforma de desarrollo de aplicaciones para el backend, autenticación y almacenamiento de datos.
 - CSS: Estilos para el diseño y la apariencia de la aplicación.
+- SweetAler2: Se ha instalado la dependencia de SweetAlert2 para generar alertas cuando se agrega al carrito, se elimina o se vacia el carrito, y cuando se genera la orden de compra
 
 ## Configuración
 

@@ -3,11 +3,10 @@ import { CartContext } from '../../Context/CartContext';
 import './Cart.css';
 import CheckoutForm from '../CheckOutForm/CheckOutForm';
 import { createOrderWithStockUpdate } from '../../Service/config';
-
+import Swal from 'sweetalert2';
 
 const Cart = () => {
   const { carrito, precioTotal, vaciarCarrito, removeItem } = useContext(CartContext);
- 
 
   const handleConfirm = async (userData) => {
     const order = {
@@ -19,16 +18,52 @@ const Cart = () => {
 
     try {
       const id = await createOrderWithStockUpdate(order);
-      
       vaciarCarrito();
-      alert(`Su compra ha sido registrada satisfactoriamente con el número de ID: ${id}`);
+
+      Swal.fire({
+        icon: 'success',
+        title: '¡Compra realizada!',
+        text: `Su compra ha sido registrada satisfactoriamente con el número de ID: ${id}`,
+      });
     } catch (error) {
-      alert(error);
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: error.message,
+      });
     }
   };
 
   const handleVaciar = () => {
-    vaciarCarrito();
+    Swal.fire({
+      title: '¿Estás seguro?',
+      text: 'Esta acción vaciará el carrito de compras.',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Vaciar',
+      cancelButtonText: 'Cancelar',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        vaciarCarrito();
+        Swal.fire('Vacío', 'El carrito ha sido vaciado.', 'success');
+      }
+    });
+  };
+
+  const confirmDelete = (productId) => {
+    Swal.fire({
+      title: '¿Estás seguro?',
+      text: 'Esta acción eliminará el producto del carrito.',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Eliminar',
+      cancelButtonText: 'Cancelar',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        removeItem(productId);
+        Swal.fire('Eliminado', 'El producto ha sido eliminado del carrito.', 'success');
+      }
+    });
   };
 
   return (
@@ -58,7 +93,7 @@ const Cart = () => {
                 <td>${prod.precio * prod.cantidad}</td>
                 <td>{prod.cantidad}</td>
                 <td>
-                  <button onClick={() => removeItem(prod.id)}>Eliminar</button>
+                  <button onClick={() => confirmDelete(prod.id)}>Eliminar</button>
                 </td>
               </tr>
             ))}
