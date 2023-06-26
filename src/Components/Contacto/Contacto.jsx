@@ -6,7 +6,7 @@ const Contacto = () => {
     <div className="container">
       <h2>Contacto</h2>
       <p>
-        En Verdecita, nos dedicamos a llevar la belleza de la naturaleza a tu hogar. Desde nuestro inicio en [año de inicio], nos hemos comprometido a ofrecer las mejores plantas de interior y crear espacios vibrantes y llenos de vida.
+        En Verdecita, nos dedicamos a llevar la belleza de la naturaleza a tu hogar. Desde nuestro inicio en 2023, nos hemos comprometido a ofrecer las mejores plantas de interior y crear espacios vibrantes y llenos de vida.
       </p>
       <p>
         Nuestro equipo está formado por apasionados expertos en jardinería y amantes de las plantas. Trabajamos arduamente para seleccionar cuidadosamente cada planta en nuestro catálogo, asegurando su calidad y belleza. Nos enorgullece ofrecer una amplia variedad de plantas exóticas y únicas que se adaptan a diferentes gustos y estilos de vida.

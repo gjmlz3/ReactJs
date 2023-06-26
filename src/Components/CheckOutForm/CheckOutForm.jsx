@@ -8,6 +8,12 @@ export default function CheckoutForm({ onConfirm }) {
     email: "",
   });
 
+  const [errors, setErrors] = useState({
+    nombre: "",
+    phone: "",
+    email: "",
+  });
+
   function onInputChange(evt) {
     const prop = evt.target.name;
     const value = evt.target.value;
@@ -19,13 +25,49 @@ export default function CheckoutForm({ onConfirm }) {
 
   function onSubmit(evt) {
     evt.preventDefault();
-    
-    onConfirm(userData);
+
+    // Realizar validaciones
+    const newErrors = {};
+    if (userData.nombre.trim() === "") {
+      newErrors.nombre = "El nombre es requerido";
+    }
+    if (userData.phone.trim() === "") {
+      newErrors.phone = "El teléfono es requerido";
+    } else if (!/^\d+$/.test(userData.phone)) {
+      newErrors.phone = "Ingresa solo números en el teléfono";
+    }
+    if (!isValidEmail(userData.email)) {
+      newErrors.email = "Ingresa un email válido";
+    }
+
+    // Verificar si hay errores
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+    } else {
+      // Si no hay errores, continuar con la confirmación
+      onConfirm(userData);
+      setErrors({
+        nombre: "",
+        phone: "",
+        email: "",
+      });
+    }
+  }
+
+  function isValidEmail(email) {
+    // Patrón simple para verificar el formato del email
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
   }
 
   function handleReset(evt) {
     evt.preventDefault();
     setUserData({
+      nombre: "",
+      phone: "",
+      email: "",
+    });
+    setErrors({
       nombre: "",
       phone: "",
       email: "",
@@ -46,15 +88,17 @@ export default function CheckoutForm({ onConfirm }) {
           type="text"
           onChange={onInputChange}
         />
+        {errors.nombre && <span className="error">{errors.nombre}</span>}
       </div>
       <div style={styleInput}>
         <label style={label}>Teléfono</label>
         <input
           value={userData.phone}
           name="phone"
-          type="phone"
+          type="text"
           onChange={onInputChange}
         />
+        {errors.phone && <span className="error">{errors.phone}</span>}
       </div>
       <div style={styleInput}>
         <label style={label}>Email</label>
@@ -64,11 +108,10 @@ export default function CheckoutForm({ onConfirm }) {
           type="email"
           onChange={onInputChange}
         />
+        {errors.email && <span className="error">{errors.email}</span>}
       </div>
       <button>Crear orden</button>
       <button onClick={handleReset}>Vaciar</button>
     </form>
   );
 }
-
-
